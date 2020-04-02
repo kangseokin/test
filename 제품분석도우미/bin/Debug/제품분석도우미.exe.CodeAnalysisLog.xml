@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="C:\Users\QM전송\Desktop\강석인\제품분석도우미(201601270511)\제품분석도우미\제품분석도우미\bin\Debug\제품분석도우미.exe">
+   <Modules>
+    <Module Name="제품분석도우미.exe">
+     <Namespaces>
+      <Namespace Name="제품분석도우미">
+       <Types>
+        <Type Name="Form1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="gridViewFont" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-01-30 09:30:11Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\QM전송\Desktop\강석인\제품분석도우미(201601270511)\제품분석도우미\제품분석도우미" File="Form1.Designer.cs" Line="15">'Form1'에 IDisposable 형식 'Font'의 'Form1.gridViewFont' 필드가 있습니다. 'Form1'의 Dispose 메서드를 변경하여 이 필드에 대해 Dispose 또는 Close를 호출하십시오.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="성분및기계적성질비교" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#GetOrders(System.String,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="개체를 여러 번 삭제하지 마십시오." Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2016-01-30 09:30:11Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\QM전송\Desktop\강석인\제품분석도우미(201601270511)\제품분석도우미\제품분석도우미" File="성분및기계적성질비교.cs" Line="401">'con' 개체는 '성분및기계적성질비교.GetOrders(string, int, int)' 메서드에서 여러 번 삭제할 수 있습니다. System.ObjectDisposedException이 생성되지 않도록 개체에 대해 Dispose를 여러 번 호출하지 마십시오.: Lines: 401, 468</Issue>
+            </Message>
+            <Message TypeName="보안상 취약한 부분이 있는지 SQL 쿼리를 검토하십시오." Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-01-30 09:30:11Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\QM전송\Desktop\강석인\제품분석도우미(201601270511)\제품분석도우미\제품분석도우미" File="성분및기계적성질비교.cs" Line="323">'성분및기계적성질비교.GetOrders(string, int, int)'의 'SqlCommand.SqlCommand(string, SqlConnection)'에 전달된 쿼리 문자열에 다음 'drOrder["HeatNo"]' 변수가 포함되었을 수 있습니다. 이러한 변수가 사용자 입력을 통해 작성될 수 있는 경우 문자열 연결로 쿼리를 작성하는 대신 저장 프로시저 또는 매개 변수화된 SQL 쿼리를 사용해 보십시오.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\QM전송\Desktop\강석인\제품분석도우미(201601270511)\제품분석도우미\제품분석도우미" File="성분및기계적성질비교.cs" Line="266">'성분및기계적성질비교.GetOrders(string, int, int)'의 'SqlDataAdapter.SqlDataAdapter(string, string)'에 전달된 쿼리 문자열에 다음 '일자', '(압연공장 + 1)', '(근무형태 + 1)' 변수가 포함되었을 수 있습니다. 이러한 변수가 사용자 입력을 통해 작성될 수 있는 경우 문자열 연결로 쿼리를 작성하는 대신 저장 프로시저 또는 매개 변수화된 SQL 쿼리를 사용해 보십시오.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="압연시편분석" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#분석프로그램저장성분불려오기(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="보안상 취약한 부분이 있는지 SQL 쿼리를 검토하십시오." Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-01-30 09:30:11Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\QM전송\Desktop\강석인\제품분석도우미(201601270511)\제품분석도우미\제품분석도우미" File="압연시편분석.cs" Line="211">'압연시편분석.분석프로그램저장성분불려오기(string)'의 'OleDbCommand.OleDbCommand(string, OleDbConnection)'에 전달된 쿼리 문자열에 다음 'Index' 변수가 포함되었을 수 있습니다. 이러한 변수가 사용자 입력을 통해 작성될 수 있는 경우 문자열 연결로 쿼리를 작성하는 대신 저장 프로시저 또는 매개 변수화된 SQL 쿼리를 사용해 보십시오.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#압연시편DB에저장(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.List`1&lt;제품분석도우미.압연시편분석&gt;,System.String,System.String,System.String,System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="보안상 취약한 부분이 있는지 SQL 쿼리를 검토하십시오." Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-01-30 09:30:11Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\QM전송\Desktop\강석인\제품분석도우미(201601270511)\제품분석도우미\제품분석도우미" File="압연시편분석.cs" Line="495">'압연시편분석.압연시편DB에저장(string, string, string, string, string, string, string, List&lt;압연시편분석&gt;, string, string, string, string, string, string)'의 'SqlCommand.SqlCommand(string, SqlConnection)'에 전달된 쿼리 문자열에 다음 '검사일자', '반', '검사원', '검사원1', 'HeatNO', '검사구분', '검사순번', 'new string[73][15]', 'new string[73][17]', 'new string[73][19]', 'new string[73][21]', 'new string[73][23]', 'new string[73][25]', 'new string[73][27]', 'new string[73][29]', 'new string[73][31]', 'new string[73][33]', 'new string[73][35]', 'new string[73][37]', 'new string[73][39]', 'new string[73][41]', 'new string[73][43]', 'new string[73][45]', 'new string[73][47]', 'new string[73][49]', 'new string[73][51]', 'new string[73][53]', 'new string[73][55]', 'new string[73][57]', 'new string[73][59]', '강종', '호칭', '압연NO', '합격판정', '등록일자', '수정일자' 변수가 포함되었을 수 있습니다. 이러한 변수가 사용자 입력을 통해 작성될 수 있는 경우 문자열 연결로 쿼리를 작성하는 대신 저장 프로시저 또는 매개 변수화된 SQL 쿼리를 사용해 보십시오.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#압연시편검사순번알아보기(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="보안상 취약한 부분이 있는지 SQL 쿼리를 검토하십시오." Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-01-30 09:30:11Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\QM전송\Desktop\강석인\제품분석도우미(201601270511)\제품분석도우미\제품분석도우미" File="압연시편분석.cs" Line="401">'압연시편분석.압연시편검사순번알아보기(string)'의 'SqlCommand.CommandText.set(string)'에 전달된 쿼리 문자열에 다음 'HeatNO' 변수가 포함되었을 수 있습니다. 이러한 변수가 사용자 입력을 통해 작성될 수 있는 경우 문자열 연결로 쿼리를 작성하는 대신 저장 프로시저 또는 매개 변수화된 SQL 쿼리를 사용해 보십시오.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+   <Name>삭제 가능한 필드는 삭제해야 합니다.</Name>
+   <Description>IDisposable을 구현하는 형식은 IDisposable을 구현하는 필드도 소유합니다. 형식의 Dispose() 구현을 캡슐화하면 삭제 가능한 각 필드에 대해 Dispose()를 호출해야 합니다.</Description>
+   <Resolution Name="Default">{0}에 IDisposable 형식 {2}의 {1} 필드가 있습니다. {0}의 Dispose 메서드를 변경하여 이 필드에 대해 Dispose 또는 Close를 호출하십시오.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182328.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="개체를 여러 번 삭제하지 마십시오." Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>개체를 여러 번 삭제하지 마십시오.</Name>
+   <Description>올바로 구현된 Dispose 메서드는 예외를 throw하지 않고 여러 번 호출할 수 있습니다. 그러나 확실하지는 않으므로 System.ObjectDisposedException이 생성되지 않도록 개체에 대해 Dispose를 여러 번 호출하지 마십시오.</Description>
+   <Resolution Name="Default">{0} 개체는 {1} 메서드에서 여러 번 삭제할 수 있습니다. System.ObjectDisposedException이 생성되지 않도록 개체에 대해 Dispose를 여러 번 호출하지 마십시오.: Lines: 401, 468</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="보안상 취약한 부분이 있는지 SQL 쿼리를 검토하십시오." Category="Microsoft.Security" CheckId="CA2100">
+   <Name>보안상 취약한 부분이 있는지 SQL 쿼리를 검토하십시오.</Name>
+   <Description>사용자 입력을 통해 작성된 SQL 명령 문자열은 SQL 삽입 공격에 취약합니다. Microsoft SQL Server 및 기타 데이터베이스 서버는 저장 프로시저 및 매개 변수화된 SQL 쿼리를 지원하며, 이 기능은 삽입 공격의 위험을 줄여 줍니다.</Description>
+   <Resolution Name="WithNonLiterals">{1}의 {0}에 전달된 쿼리 문자열에 다음 {2} 변수가 포함되었을 수 있습니다. 이러한 변수가 사용자 입력을 통해 작성될 수 있는 경우 문자열 연결로 쿼리를 작성하는 대신 저장 프로시저 또는 매개 변수화된 SQL 쿼리를 사용해 보십시오.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">범주</String>
+  <String Key="Certainty">확신도</String>
+  <String Key="CollapseAll">모두 축소</String>
+  <String Key="CheckId">확인 ID</String>
+  <String Key="Error">오류</String>
+  <String Key="Errors">개 오류</String>
+  <String Key="ExpandAll">모두 확장</String>
+  <String Key="Help">도움말</String>
+  <String Key="Line">줄</String>
+  <String Key="Messages">메시지</String>
+  <String Key="LocationNotStoredInPdb">[Pdb에 위치가 저장되지 않음]</String>
+  <String Key="Project">프로젝트</String>
+  <String Key="Resolution">확인</String>
+  <String Key="Rule">규칙</String>
+  <String Key="RuleFile">규칙 파일</String>
+  <String Key="RuleDescription">규칙 설명</String>
+  <String Key="Source">소스</String>
+  <String Key="Status">상태</String>
+  <String Key="Target">대상</String>
+  <String Key="Warning">경고</String>
+  <String Key="Warnings">경고</String>
+  <String Key="ReportTitle">코드 분석 보고서</String>
+ </Localized>
+</FxCopReport>
